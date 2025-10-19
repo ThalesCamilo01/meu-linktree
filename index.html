@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="src/favicon.png" type="image/x-icon" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Linktree</title>
+  </head>
+  <body
+    class="bg-gray-200 flex flex-col items-center justify-center min-h-screen select-none"
+  >
+    <div
+      class="shadow-xl bg-white rounded-2xl items-center my-5 flex flex-col gap-5 w-[85vw] max-w-3xl p-5 font-semibold font-['Sans Serif']"
+    >
+      <!-- Perfil -->
+      <section
+        class="flex gap-8 p-2 items-center pb-10 border-b-1 border-black/10"
+      >
+        <img
+          src="src/avatar.jpeg"
+          alt="Imagem de Thales"
+          draggable="false"
+          class="shadow-lg rounded-full object-cover size-32 md:size-48"
+        />
+        <div>
+          <h1 class="text-2xl my-2">Thales Camilo M.</h1>
+          <p class="font-light text-xl">Prestador de Serviços técnicos</p>
+        </div>
+      </section>
+
+      <!-- Redes sociais -->
+      <section class="flex items-center gap-5 mx-auto p-2">
+        <a
+          href="https://github.com/ThalesCamilo01"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="src/github.png"
+            alt="Github"
+            class="w-12 h-12 cursor-pointer hover:scale-120 transition"
+          />
+        </a>
+        <a
+          href="https://www.instagram.com/thales_cmm/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="src/instagram.png"
+            alt="Instagram"
+            class="w-12 h-12 cursor-pointer hover:scale-120 transition"
+          />
+        </a>
+        <a
+          href="https://wa.me/55992245260"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="src/whatsapp.png"
+            alt="Whatsapp"
+            class="w-12 h-12 cursor-pointer hover:scale-120 transition filter-drop-shadow"
+          />
+        </a>
+        <a
+          href="mailto:thalescamilomda@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="src/email.png"
+            alt="Email"
+            class="w-12 h-12 cursor-pointer hover:scale-120 transition"
+          />
+        </a>
+      </section>
+
+      <!-- Serviços, Sobre mim, Formação -->
+      <section class="w-full mt-16 flex flex-col gap-10">
+        <ul class="flex justify-center gap-1 text-gray-900">
+          <button
+            onclick="sectionFocus(this, 'services')"
+            class="active block shadow-sm p-1 rounded-l-xl border border-gray-200 text-center text-sm/8 font-medium hover:bg-indigo-600 hover:text-white transition hover:cursor-pointer"
+          >
+            Serviços
+          </button>
+
+          <button
+            onclick="sectionFocus(this, 'timeline')"
+            class="block shadow-sm p-1 border border-gray-200 text-center text-sm/8 font-medium hover:bg-indigo-600 hover:text-white transition hover:cursor-pointer"
+          >
+            Formação
+          </button>
+
+          <button
+            onclick="sectionFocus(this, 'aboutme')"
+            class="block shadow-sm p-1 rounded-r-xl border border-gray-200 text-center text-sm/8 font-medium hover:bg-indigo-600 hover:text-white transition hover:cursor-pointer"
+          >
+            Sobre Mim
+          </button>
+        </ul>
+
+        <!-- Conteúdo -->
+        <div class="shadow-lg w-full p-5 flex flex-col items-center rounded">
+          
+          <!-- Serviços -->
+          <article id="services" class="hidden space-y-4 w-full font-normal">
+            <details
+              class="hover:cursor-pointer group [&_summary::-webkit-details-marker]:hidden"
+            >
+              <summary
+                class="flex items-center justify-between gap-1.5 rounded-md border border-gray-100 bg-slate-200 p-4 text-gray-900"
+              >
+                <h2 class="text-lg font-medium">
+                  Manutenção, Consertos e Reformas
+                </h2>
+
+                <svg
+                  class="size-5 shrink-0 transition-transform duration-300 group-open:-rotate-180"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </summary>
+
+              <p class="px-4 pt-4 text-gray-900">
+                Soluções completas para problemas elétricos, mecânicos e estruturais. 
+                Realizo diagnóstico, reparos e ajustes finos em equipamentos residenciais e comerciais, 
+                garantindo durabilidade e segurança. 
+                Foco em resolver o problema na primeira visita.
+              </p>
+            </details>
+
+            <details
+              class="hover:cursor-pointer group [&_summary::-webkit-details-marker]:hidden"
+            >
+              <summary
+                class="flex items-center justify-between gap-1.5 rounded-md border border-gray-100 bg-slate-200 p-4 text-gray-900"
+              >
+                <h2 class="text-lg font-medium">
+                  Automação Residencial e Implementação de IoT
+                </h2>
+
+                <svg
+                  class="size-5 shrink-0 transition-transform duration-300 group-open:-rotate-180"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </summary>
+
+              <p class="px-4 pt-4 text-gray-900">
+                Desenvolvimento e instalação de sistemas inteligentes para sua casa. 
+                Integro dispositivos IoT para controle de iluminação, segurança e consumo de energia, 
+                trazendo conforto, eficiência e modernidade ao seu ambiente.
+              </p>
+            </details>
+
+            <details
+              class="hover:cursor-pointer group [&_summary::-webkit-details-marker]:hidden"
+            >
+              <summary
+                class="flex items-center justify-between gap-1.5 rounded-md border border-gray-100 bg-slate-200 p-4 text-gray-900"
+              >
+                <h2 class="text-lg font-medium">
+                  Consultoria e Projetos Personalizados
+                </h2>
+
+                <svg
+                  class="size-5 shrink-0 transition-transform duration-300 group-open:-rotate-180"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </summary>
+
+              <p class="px-4 pt-4 text-gray-900">
+                Precisa de uma solução única? Ofereço serviços especializados e sob demanda, 
+                desde a concepção de ideias até a execução de projetos técnicos complexos. 
+                Entre em contato para discutirmos suas necessidades exclusivas.
+              </p>
+            </details>
+          </article>
+
+          <!-- Formação -->
+          <article
+            id="timeline"
+            class="hidden relative space-y-8 before:absolute before:-ml-px before:h-full before:w-0.5 before:rounded-full before:bg-gray-200"
+          >
+            <li class="relative -ms-1.5 flex items-start gap-4">
+              <span class="size-3 shrink-0 rounded-full bg-blue-600"></span>
+
+              <div class="-mt-2">
+                <time class="text-xs/none font-medium text-gray-700"
+                  >12/02/2025 - Atual</time
+                >
+
+                <h3 class="text-lg font-bold text-gray-900">Tecnologia em Fabricação Mecânica</h3>
+
+                <p class="mt-0.5 text-sm text-gray-700">
+                  Universidade Federal de Santa Maria (UFSM). Foco em processos de manufatura, automação industrial e eficiência energética.
+                </p>
+              </div>
+            </li>
+
+            <li class="relative -ms-1.5 flex items-start gap-4">
+              <span class="size-3 shrink-0 rounded-full bg-blue-600"></span>
+
+              <div class="-mt-2">
+                <time class="text-xs/none font-medium text-gray-700"
+                  >15/03/2025</time
+                >
+
+                <h3 class="text-lg font-bold text-gray-900">Técnico em mecânica industrial</h3>
+
+                <p class="mt-0.5 text-sm text-gray-700">
+                  Colégio Técnico Industrial de Santa Maria (CTISM). 
+                  Manutenção preventiva de equipamentos industriais, Processos de fabricação, Desenho Técnico e Soldagem.
+                </p>
+              </div>
+            </li>
+
+            <li class="hidden relative -ms-1.5 flex items-start gap-4">
+              <span class="size-3 shrink-0 rounded-full bg-blue-600"></span>
+
+              <div class="-mt-2">
+                <time class="text-xs/none font-medium text-gray-700"
+                  >24/04/2025</time
+                >
+
+                <h3 class="text-lg font-bold text-gray-900">Launch</h3>
+
+                <p class="mt-0.5 text-sm text-gray-700">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
+                  officiis tempora ipsum adipisci tenetur sunt quae
+                  exercitationem sed pariatur porro!
+                </p>
+              </div>
+            </li>
+          </article>
+
+          <!-- Sobre Mim -->
+          <article id="aboutme" class="hidden flex items-start gap-4">
+            <img
+              alt=""
+              src="src/avatar-2.png"
+              draggable="false"
+              class="size-20 rounded object-cover"
+            />
+
+            <div>
+              <h3 class="font-medium text-gray-900 sm:text-lg">
+                Thales Camilo Machado
+              </h3>
+              <p class="mt-0.5 text-gray-600 font-normal">
+                Especialista em Soluções Técnicas e Manutenção. Serviços de alta qualidade em manutenção geral, reparos e implementação de automação residencial/IoT. 
+                Meu objetivo é proporcionar soluções técnicas eficientes, seguras e duradouras, garantindo o melhor funcionamento dos seus equipamentos e sistemas.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
